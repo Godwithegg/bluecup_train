@@ -1,10 +1,11 @@
 #include<cstdio>
 #include<iostream>
 #include<queue>
+#include<cstring>
 using namespace std;
 int main()
 {
-    priority_queue<int,vector<int>,greater<int> > que;  //½«¶ÓÁĞ°´ÕÕÊıÖµ´óĞ¡´ÓĞ¡µ½´óÅÅÁĞ
+    priority_queue<int,vector<int>,greater<int> > que;  //å°†é˜Ÿåˆ—æŒ‰ç…§æ•°å€¼å¤§å°ä»å°åˆ°å¤§æ’åˆ—
     int n;
     scanf("%d",&n);
     for(int i=0;i<n;i++)
@@ -20,13 +21,13 @@ int main()
         que.pop();
         int b=que.top();
         que.pop();
-        int sum=a+b;   //ºÏ²¢×îĞ¡µÄÁ½¸ö¹û×Ó
+        int sum=a+b;   //åˆå¹¶æœ€å°çš„ä¸¤ä¸ªæœå­
         total+=sum;
-        if(!que.empty())  //Èç¹ûµ±Ç°»¹ÓĞ¹û×ÓÃ»ÓĞ±»ºÏ²¢
+        if(!que.empty())  //å¦‚æœå½“å‰è¿˜æœ‰æœå­æ²¡æœ‰è¢«åˆå¹¶
         {
             que.push(sum);
         }
     }
-    printf("%d",total);   //×Ü¹²ºÏ²¢µÄ´ÎÊı
+    printf("%d",total);   //æ€»å…±åˆå¹¶çš„æ¬¡æ•°
     return 0;
 }

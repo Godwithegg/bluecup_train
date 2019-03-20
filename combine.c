@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    priority_queue<int,vector<int>,greater<int> > que;  //将队列按照数值大小从小到大排列
+    priority_queue<int,vector<int>,greater<int> > que;  //将队列按照数值大小从小到大排列 优先队列
     int n;
     scanf("%d",&n);
     for(int i=0;i<n;i++)
